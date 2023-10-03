@@ -49,6 +49,7 @@ export default defineConfig({
             base: "/smart-accounts/signers",
             link: "/overview",
             items: [
+              { text: "Privy", link: "/privy" },
               { text: "Capsule", link: "/capsule" },
               { text: "Magic.Link", link: "/magic-link" },
               { text: "Turnkey", link: "/turnkey" },
