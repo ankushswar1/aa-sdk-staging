@@ -13,13 +13,15 @@ import { sepolia } from "viem/chains";
 const {wallets} = useWallets();
 const embeddedWallet = wallets.find((wallet) => (wallet.walletClientType === 'privy'));
 
+if (!embeddedWallet) throw new Error('User does not have an embedded wallet');
+
 // Switch the embedded wallet to your desired network
 await embeddedWallet.switchChain(sepolia.id);
 
 // Get a viem client from the embedded wallet
 const eip1193provider = await embeddedWallet.getEthereumProvider();
 const privyClient = createWalletClient({
-    account: embeddedWallet?.address,
+    account: embeddedWallet.address,
     chain: sepolia,
     transport: custom(eip1193provider)
 });
