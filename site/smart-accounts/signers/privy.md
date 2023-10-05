@@ -16,7 +16,7 @@ head:
 
 [Privy](https://privy.io) is an easy way for web3 developers to onboard users across mobile and desktop, regardless of whether they already have a wallet or not.
 
-With Privy, you can easily provision **self-custodial embedded wallets** for your users when they login with email, SMS, or social logins, while also enabling web3-native users to use their existing wallets with your app, if they prefer. **It’s one library to onboard all users**, regardless of where they are in their web3 journey.
+With Privy, you can easily provision **self-custodial embedded wallets** for your users when they login with email, SMS, or social logins, while also enabling web3-native users to use their existing wallets with your app, if they prefer.
 
 Combining Privy with Account Kit allows you to seamlessly generate embedded wallets for your users and supercharge these wallets with account abstraction – setting the foundation for an innovative & delightful onchain experience.
 
@@ -54,40 +54,7 @@ First, set up your app with Privy following the [Privy Quickstart](https://docs.
 
 ```
 
-Then, when a user logs in to your app, Privy will create an embedded wallet for them. You can use this embedded wallet to create a `SmartAccountSigner` for the user:
+Then, when a user logs in to your app, Privy will create an embedded wallet for them. You can use this embedded wallet to create a `LightSmartContractAccount` from `aa-accounts`:
 
 <<< @/snippets/privy.ts
 
-### Use it with LightAccount
-
-Let's see it in action with `aa-alchemy` and `LightSmartContractAccount` from `aa-accounts`:
-::: code-group
-
-```ts [example.ts]
-
-import { AlchemyProvider } from "@alchemy/aa-alchemy";
-import { LightSmartContractAccount } from "@alchemy/aa-accounts";
-import { sepolia } from "viem/chains";
-import { privySigner } from "./privy";
-
-const chain = sepolia;
-
-const provider = new AlchemyProvider({
-  apiKey: "ALCHEMY_API_KEY",
-  chain,
-  entryPointAddress: "0x...",
-}).connect(
-  (rpcClient) =>
-    new LightSmartContractAccount({
-      entryPointAddress: "0x...",
-      chain: rpcClient.chain,
-      owner: magicSigner,
-      factoryAddress: "0x...",
-      rpcClient,
-    })
-);
-```
-
-<<< @/snippets/privy.ts
-
-:::
