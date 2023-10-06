@@ -38,7 +38,7 @@ yarn add @privy-io/react-auth
 
 ### Create a SmartAccountSigner
 
-First, set up your app with Privy following the [Privy Quickstart](https://docs.privy.io/guide/quickstart). You should also configure your `PrivyProvider` to create embedded wallets for your users when they login, like below:
+First, set up your React app with Privy following the [Privy Quickstart](https://docs.privy.io/guide/quickstart). You should also configure your `PrivyProvider` to create embedded wallets for your users when they login, like below:
 
 ```ts [PrivyProvider]
 
