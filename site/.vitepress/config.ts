@@ -49,9 +49,9 @@ export default defineConfig({
             base: "/smart-accounts/signers",
             link: "/overview",
             items: [
-              { text: "Privy", link: "/privy" },
               { text: "Capsule", link: "/capsule" },
               { text: "Magic.Link", link: "/magic-link" },
+              { text: "Privy", link: "/privy" },
               { text: "Turnkey", link: "/turnkey" },
               { text: "Web3Auth", link: "/web3auth" },
               { text: "Externally Owned Account", link: "/eoa" },
