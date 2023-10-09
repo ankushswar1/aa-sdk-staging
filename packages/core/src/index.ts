@@ -13,7 +13,10 @@ export type { SimpleSmartAccountParams } from "./account/simple.js";
 export type * from "./account/types.js";
 export { LocalAccountSigner } from "./signer/local-account.js";
 export type { SmartAccountSigner } from "./signer/types.js";
-export { verifyEIP6492Signature, wrapWith6492 } from "./signer/utils.js";
+export {
+  verifyEIP6492Signature,
+  wrapSignatureWith6492,
+} from "./signer/utils.js";
 export { WalletClientSigner } from "./signer/wallet-client.js";
 
 export {
@@ -37,15 +40,17 @@ export type {
 export type * from "./provider/types.js";
 
 export type * from "./types.js";
-export type * from "./utils.js";
+export type * from "./utils/index.js";
 export {
   asyncPipe,
+  bigIntMax,
+  bigIntPercent,
   deepHexlify,
   defineReadOnly,
   getChain,
   getUserOperationHash,
   resolveProperties,
-} from "./utils.js";
+} from "./utils/index.js";
 
 export { Logger } from "./logger.js";
 export type { LogLevel } from "./logger.js";

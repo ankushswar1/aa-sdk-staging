@@ -30,7 +30,6 @@ Before executing, sendUserOperation will run the user operation through the midd
 
 ```ts [example.ts]
 import { provider } from "./provider";
-
 // [!code focus:99]
 // send single
 provider.sendUserOperation({

@@ -22,6 +22,10 @@ export default defineConfig({
       },
     ],
 
+    search: {
+      provider: "local",
+    },
+
     sidebar: [
       { text: "Introduction", link: "/introduction" },
       { text: "Getting Started", link: "/getting-started" },
@@ -50,7 +54,9 @@ export default defineConfig({
             link: "/overview",
             items: [
               { text: "Capsule", link: "/capsule" },
+              { text: "Lit Protocol", link: "/lit" },
               { text: "Magic.Link", link: "/magic-link" },
+              { text: "Portal", link: "/portal" },
               { text: "Privy", link: "/privy" },
               { text: "Turnkey", link: "/turnkey" },
               { text: "Web3Auth", link: "/web3auth" },
@@ -64,6 +70,7 @@ export default defineConfig({
           { text: "Transferring Ownership", link: "/transferring-ownership" },
         ],
       },
+      { text: "ERC-6900", link: "/erc-6900" },
       // Per Package docs
       {
         text: "aa-core",
@@ -196,7 +203,10 @@ export default defineConfig({
                 collapsed: true,
                 base: "/packages/aa-core/signers/utils",
                 items: [
-                  { text: "wrapWith6492", link: "/wrapWith6492" },
+                  {
+                    text: "wrapSignatureWith6492",
+                    link: "/wrapSignatureWith6492",
+                  },
                   {
                     text: "verifyEIP6492Signature",
                     link: "/verifyEIP6492Signature",

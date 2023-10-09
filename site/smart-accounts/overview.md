@@ -22,13 +22,13 @@ Before diving into smart accounts, it's important to [set up your Alchemy accoun
 
 ## 2. Choosing a Smart Account
 
-The next step is to select the right smart account implementation for your application. We recommend using `LightAccount`, which is a simple, secure, and cost-effective solution for most use cases. It supports features such as owner transfers, EIP-1271 message signing, batched transactions and more. However, if you're looking for more advanced features, you can use your own account implementation. We'll cover both options in detail in the following sections:
+The next step is to select the right smart account implementation for your application. We recommend using `LightAccount`, which is a simple, secure, and cost-effective solution for most use cases. It supports features such as owner transfers, [ERC-1271](https://eips.ethereum.org/EIPS/eip-1271) message signing, batched transactions and more. However, if you're looking for more advanced features, you can use your own account implementation. We'll cover both options in detail in the following sections:
 
 - [Using Light Account](accounts/light-account)
 - [Using your own account implementation](accounts/using-your-own)
 
 ::: tip Note
-The `LightAccount` implementation is not [EIP-6900](https://eips.ethereum.org/EIPS/eip-6900) compliant. The `ModularAccount` implementation is launching later this year and will be EIP-6900 compatible. However, `LightAccount` is forward-compatible with `ModularAccount` and can be upgraded to it in the future.
+The `LightAccount` implementation is not [ERC-6900](/erc-6900) compliant. The `ModularAccount` implementation is launching later this year and will be EIP-6900 compatible. However, `LightAccount` is forward-compatible with `ModularAccount` and can be upgraded to it in the future.
 :::
 
 ## 3. Choosing a Signer

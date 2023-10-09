@@ -14,7 +14,7 @@ head:
 
 # signTypedDataWith6492
 
-`signTypedDataWith6492` supports signing typed data for deployed smart contract accounts, as well as undeployed accounts (counterfactual addresses) using EIP-6492.
+`signTypedDataWith6492` supports signing typed data for deployed smart contract accounts, as well as undeployed accounts (counterfactual addresses) using [ERC-6492](https://eips.ethereum.org/EIPS/eip-6492).
 
 ## Usage
 
@@ -22,7 +22,7 @@ head:
 
 ```ts [example.ts]
 import { provider } from "./provider";
-
+// [!code focus:99]
 // sign typed data (works for undeployed and deployed accounts)
 const signedTypedDataWith6492 = provider.signTypedDataWith6492({
   domain: {
@@ -64,7 +64,7 @@ const signedTypedDataWith6492 = provider.signTypedDataWith6492({
 
 ### `Promise<Hash>`
 
-A Promise containing the signature of the typed data, additionally wrapped in EIP-6492 format if the account is undeployed.
+A Promise containing the signature of the typed data, additionally wrapped in ERC-6492 format if the account is undeployed.
 
 ## Parameters
 
